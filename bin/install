@@ -66,13 +66,13 @@ if [ ! -z "${SNAPSHOT-}" ] && [ "$SNAPSHOT" = "true" ]; then
 fi
 
 # Install metadata REST application
-get_war $BASE_MAVEN_URL/com/redhat/lightblue/rest/rest-metadata OPENSHIFT_LIGHTBLUE_METADATA_REST_APP_VERSION
+get_war $BASE_MAVEN_URL/com/redhat/lightblue/rest/ligthblue-rest-metadata OPENSHIFT_LIGHTBLUE_METADATA_REST_APP_VERSION
 
 # Install crud REST application
-get_war $BASE_MAVEN_URL/com/redhat/lightblue/rest/rest-crud OPENSHIFT_LIGHTBLUE_CRUD_REST_APP_VERSION
+get_war $BASE_MAVEN_URL/com/redhat/lightblue/rest/lightblue-rest-crud OPENSHIFT_LIGHTBLUE_CRUD_REST_APP_VERSION
 
 # Install metadata management application (latest)
-get_war $BASE_MAVEN_URL/com/redhat/lightblue/applications/metadata-mgmt OPENSHIFT_LIGHTBLUE_METADATA_MANAGEMENT_APP_VERSION
+get_war $BASE_MAVEN_URL/com/redhat/lightblue/applications/lightblue-applications-metadata-mgmt OPENSHIFT_LIGHTBLUE_METADATA_MANAGEMENT_APP_VERSION
 
 # Install crud management application (FUTURE)
 #get_war $BASE_MAVEN_URL/com/redhat/lightblue/applications/crud-mgmt OPENSHIFT_LIGHTBLUE_METADATA_CRUD_APP_VERSION
