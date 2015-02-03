@@ -21,8 +21,8 @@ function get_war {
 
     # if there's no BASE_VERSION value it means there's no 'latest' element. seems to happen when there is only one version
     if [ "$BASE_VERSION" == "" ]; then
-        echo "exec: xmllint --shell /tmp/maven-metadata.xml <<< `echo "cat /metadata/versioning/version[0]/text()"` | grep -v "^[/]" | sort | tail -n1"
-        BASE_VERSION=$(xmllint --shell /tmp/maven-metadata.xml <<< `echo "cat /metadata/versioning/version[0]/text()"` | grep -v "^[/]" | sort | tail -n1)
+        echo "exec: xmllint --shell /tmp/maven-metadata.xml <<< \`echo \"cat /metadata/versioning/versions/version/text()\"\` | grep -v \"^[/]\" | sort | tail -n1"
+        BASE_VERSION=$(xmllint --shell /tmp/maven-metadata.xml <<< `echo "cat /metadata/versioning/versions/version/text()"` | grep -v "^[/]" | sort | tail -n1)
     fi
 
     # if using SNAPSHOT, have to do another step to get real version
