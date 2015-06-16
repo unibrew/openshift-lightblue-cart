@@ -11,9 +11,9 @@ Info on how the download works: https://developers.openshift.com/en/get-involved
 
 Easy way to work around issues: https://developers.openshift.com/en/get-involved-extend-openshift.html#the-cartridge-reflector
 
-For example, to install a fork of this repo for user 'jewzaam' with branch 'lightblue-1.2':
+For example, to install the latest version to a new app called "test":
 ```
-rhc app create http://cartreflect-claytondev.rhcloud.com/github/jewzaam/openshift-lightblue-cart?commit=lightblue-1.2 -a test
+rhc app create http://cartreflect-claytondev.rhcloud.com/github/lightblue-platform/openshift-lightblue-cart -a test
 ```
 
 # License
