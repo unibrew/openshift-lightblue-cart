@@ -6,6 +6,8 @@ function update_configuration() {
   if marker_present java7 || [ ${1:-undefined} == java7 ]
   then
     export JAVA_HOME=$OPENSHIFT_JBOSSEAP_JDK7
+  elif marker_present java8 || [ ${1:-undefined} == java8 ]
+    export JAVA_HOME=$OPENSHIFT_JBOSSEAP_JDK8
   else
     export JAVA_HOME=$OPENSHIFT_JBOSSEAP_JDK6
   fi
